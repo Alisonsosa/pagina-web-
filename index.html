@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AprendeYa - Plataforma de E-Learning</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#inicio" class="logo">Aprende<span>Ya</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#plan-estudios">Plan de estudios</a>
+        <a href="#modalidades">Modalidades</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#certificacion">Certificación</a>
+        
+        <!-- Área dinámica de perfil / login -->
+        <div id="userProfileArea" class="user-profile-area" style="display: none;">
+          <div class="user-info">
+            <span id="userName" class="user-name"></span>
+            <span id="userRole" class="badge-role"></span>
+          </div>
+          <button id="btnLogout" class="btn btn-outline btn-sm">Cerrar Sesión</button>
+        </div>
+
+        <a href="login.html" id="btnLogin" class="btn btn-secondary">Iniciar Sesión</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Inicio / Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1>Impulsa tu futuro con los mejores cursos online</h1>
+        <p>Aprende a tu propio ritmo con instructores expertos en tecnología, negocios, diseño y más.</p>
+        <div class="hero-buttons">
+          <a href="#plan-estudios" class="btn btn-primary">Explorar Cursos</a>
+          <a href="#modalidades" class="btn btn-outline">Saber más</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-preview">
+          <span class="badge">Novedad</span>
+          <h3>Desarrollo Web Fullstack</h3>
+          <p>Domina HTML, CSS, JS, React y Node.js desde cero.</p>
+          <div class="author">
+            <div class="avatar"></div>
+            <span>Por Carlos Gómez</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plan de estudios (Cursos) -->
+  <section class="courses" id="plan-estudios">
+    <div class="container">
+      <div class="section-header">
+        <h2>Plan de Estudios y Cursos</h2>
+        <input type="text" id="courseSearch" placeholder="Buscar curso (ej: JavaScript, Diseño...)" class="search-input">
+      </div>
+
+      <div class="courses-grid" id="coursesGrid">
+        
+        <article class="course-card" data-course-id="1">
+          <div class="course-img" style="background-color: #e0e7ff;">💻</div>
+          <div class="course-content">
+            <span class="course-tag">Programación</span>
+            <h3>JavaScript Moderno: ES6+</h3>
+            <p>Aprende desde los fundamentos hasta conceptos avanzados de JS.</p>
+            <div class="course-footer">
+              <span class="price">$49.99</span>
+              <button class="btn btn-sm btn-inscribir" data-course-name="JavaScript Moderno: ES6+">Inscribirme</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card" data-course-id="2">
+          <div class="course-img" style="background-color: #fce7f3;">🎨</div>
+          <div class="course-content">
+            <span class="course-tag">Diseño</span>
+            <h3>Diseño UX/UI con Figma</h3>
+            <p>Diseña interfaces increíbles y experiencias de usuario óptimas.</p>
+            <div class="course-footer">
+              <span class="price">$39.99</span>
+              <button class="btn btn-sm btn-inscribir" data-course-name="Diseño UX/UI con Figma">Inscribirme</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card" data-course-id="3">
+          <div class="course-img" style="background-color: #dcfce7;">📊</div>
+          <div class="course-content">
+            <span class="course-tag">Negocios</span>
+            <h3>Marketing Digital 360</h3>
+            <p>Estrategias de SEO, SEM y redes sociales para hacer crecer marcas.</p>
+            <div class="course-footer">
+              <span class="price">$29.99</span>
+              <button class="btn btn-sm btn-inscribir" data-course-name="Marketing Digital 360">Inscribirme</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modalidades -->
+  <section class="section-padding" id="modalidades">
+    <div class="container">
+      <h2>Modalidades de Aprendizaje</h2>
+      <p class="section-desc">Adaptadas a tus horarios e intensidad requerida.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>⚡ A tu propio ritmo</h3>
+          <p>Accede a las clases grabadas las 24 horas del día, los 7 días de la semana.</p>
+        </div>
+        <div class="feature-card">
+          <h3>👥 Clases en Vivo</h3>
+          <p>Sesiones semanales directas con instructores y retroalimentación en tiempo real.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🏆 Mentorías 1 a 1</h3>
+          <p>Acompañamiento técnico personalizado para tus proyectos finales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos -->
+  <section class="section-padding bg-alt" id="recursos">
+    <div class="container">
+      <h2>Recursos Descargables</h2>
+      <p class="section-desc">Materiales complementarios gratuitos para la comunidad.</p>
+      <ul class="resource-list">
+        <li>📄 Guía rápida de Comandos Git y GitHub (PDF)</li>
+        <li>🎨 Kit de UI Components en Figma</li>
+        <li>📑 Plantillas de Documentación de Proyectos</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certificación -->
+  <section class="section-padding" id="certificacion">
+    <div class="container">
+      <h2>Certificación Oficial</h2>
+      <p class="section-desc">Al completar y aprobar el proyecto final de cada curso, obtendrás una certificación verificable digitalmente con código QR único para añadir a LinkedIn y CV.</p>
+    </div>
+  </section>
+
+  <!-- Modal de Inscripción Reutilizable -->
+  <div id="modalInscripcion" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h3>Formulario de Inscripción</h3>
+      <p id="modalCourseTitle" class="modal-course-title"></p>
+      
+      <form id="enrollmentForm">
+        <input type="hidden" id="enrollCourseId" name="courseId">
+        
+        <div class="form-group">
+          <label for="enrollName">Nombre completo</label>
+          <input type="text" id="enrollName" required placeholder="Tu nombre">
+        </div>
+        
+        <div class="form-group">
+          <label for="enrollEmail">Correo electrónico</label>
+          <input type="email" id="enrollEmail" required placeholder="tu@correo.com">
+        </div>
+
+        <div id="mensajeInscripcion" class="mensaje-login"></div>
+
+        <button type="submit" class="btn btn-primary btn-block">Confirmar Inscripción</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 AprendeYa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
