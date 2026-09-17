@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Estudiante - AprendeYa</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Aprende<span>Ya</span></a>
+      <div class="user-profile-area">
+        <div class="user-info">
+          <span class="user-name">Estudiante</span>
+          <span class="badge-role">Artesanías</span>
+        </div>
+        <a href="index.html" class="btn btn-outline btn-sm">Cerrar Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container section-padding">
+    <div class="section-header">
+      <div>
+        <h2>Mis Módulos de Aprendizaje</h2>
+        <p class="section-desc">Selecciona tu disciplina y avanza según tu nivel actual.</p>
+      </div>
+    </div>
+
+    <!-- Módulos de Aprendizaje -->
+    <div class="courses-grid">
+
+      <!-- Módulo 1: Alambrismo -->
+      <article class="course-card">
+        <div class="course-img" style="background-color: #fef3c7;">💍</div>
+        <div class="course-content">
+          <span class="course-tag">Técnica Manual</span>
+          <h3>Alambrismo</h3>
+          <p>Aprende a moldear alambre para joyería y accesorios artesanales.</p>
+
+          <!-- Niveles y Progreso -->
+          <div style="margin-top: 15px;">
+            <label for="level-alambrismo" style="font-size: 0.85rem; font-weight: 600;">Nivel actual:</label>
+            <select id="level-alambrismo" class="form-control" style="margin-top: 5px; margin-bottom: 10px;">
+              <option value="basico">Básico</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="avanzado">Avanzado</option>
+            </select>
+
+            <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; justify-content: space-between; margin-bottom: 4px;">
+              <span>Progreso del nivel</span>
+              <span>40%</span>
+            </div>
+            <div style="width: 100%; background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 15px;">
+              <div style="width: 40%; background: var(--primary); height: 100%;"></div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.85rem;"><strong>Instructor:</strong> María Delgado</p>
+          
+          <div class="course-footer" style="margin-top: 15px;">
+            <button class="btn btn-primary btn-block" onclick="abrirModal('Alambrismo', 'María Delgado')">Ver Clase y Tareas</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Módulo 2: Macramé -->
+      <article class="course-card">
+        <div class="course-img" style="background-color: #e0e7ff;">🪢</div>
+        <div class="course-content">
+          <span class="course-tag">Tejido a Mano</span>
+          <h3>Macramé</h3>
+          <p>Domina los nudos básicos y complejos para tapices y objetos decorativos.</p>
+
+          <!-- Niveles y Progreso -->
+          <div style="margin-top: 15px;">
+            <label for="level-macrame" style="font-size: 0.85rem; font-weight: 600;">Nivel actual:</label>
+            <select id="level-macrame" class="form-control" style="margin-top: 5px; margin-bottom: 10px;">
+              <option value="basico" selected>Básico</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="avanzado">Avanzado</option>
+            </select>
+
+            <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; justify-content: space-between; margin-bottom: 4px;">
+              <span>Progreso del nivel</span>
+              <span>75%</span>
+            </div>
+            <div style="width: 100%; background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 15px;">
+              <div style="width: 75%; background: var(--primary); height: 100%;"></div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.85rem;"><strong>Instructor:</strong> Carlos Mendoza</p>
+
+          <div class="course-footer" style="margin-top: 15px;">
+            <button class="btn btn-primary btn-block" onclick="abrirModal('Macramé', 'Carlos Mendoza')">Ver Clase y Tareas</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Módulo 3: Mostacilla -->
+      <article class="course-card">
+        <div class="course-img" style="background-color: #fce7f3;">📿</div>
+        <div class="course-content">
+          <span class="course-tag">Bisutería Fina</span>
+          <h3>Mostacilla</h3>
+          <p>Crea patrones y tejidos detallados con abalorios y cuentas pequeñas.</p>
+
+          <!-- Niveles y Progreso -->
+          <div style="margin-top: 15px;">
+            <label for="level-mostacilla" style="font-size: 0.85rem; font-weight: 600;">Nivel actual:</label>
+            <select id="level-mostacilla" class="form-control" style="margin-top: 5px; margin-bottom: 10px;">
+              <option value="basico">Básico</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="avanzado">Avanzado</option>
+            </select>
+
+            <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; justify-content: space-between; margin-bottom: 4px;">
+              <span>Progreso del nivel</span>
+              <span>10%</span>
+            </div>
+            <div style="width: 100%; background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 15px;">
+              <div style="width: 10%; background: var(--primary); height: 100%;"></div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.85rem;"><strong>Instructor:</strong> Ana Sofía Torres</p>
+
+          <div class="course-footer" style="margin-top: 15px;">
+            <button class="btn btn-primary btn-block" onclick="abrirModal('Mostacilla', 'Ana Sofía Torres')">Ver Clase y Tareas</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Modal para Clase, Tareas, Notas y Comentarios -->
+  <div id="modalClase" class="modal">
+    <div class="modal-content" style="max-width: 600px;">
+      <span class="close-modal" onclick="cerrarModal()">&times;</span>
+      
+      <h3 id="modalTituloModulo" class="modal-course-title">Módulo</h3>
+      <p style="font-size: 0.9rem; margin-bottom: 15px;"><strong>Instructor asignado:</strong> <span id="modalInstructor">--</span></p>
+
+      <hr style="border: 0; border-top: 1px solid var(--border-color); margin-bottom: 15px;">
+
+      <!-- Sección de Tarea -->
+      <div style="margin-bottom: 20px;">
+        <h4>📋 Tarea Pendiente</h4>
+        <p id="modalTareaTexto" style="font-size: 0.9rem; color: var(--text-muted); margin: 5px 0 10px;">
+          Realizar el proyecto práctico del nivel seleccionado y subir el enlace del resultado.
+        </p>
+        <input type="text" class="form-control" placeholder="Pega aquí el enlace a tu entrega (Google Drive / Foto)..." style="margin-bottom: 8px;">
+        <button class="btn btn-sm" onclick="alert('Tarea entregada con éxito')">Entregar Tarea</button>
+      </div>
+
+      <!-- Notas del Instructor -->
+      <div style="margin-bottom: 20px; background: var(--bg-color); padding: 12px; border-radius: 8px;">
+        <h4 style="font-size: 0.9rem;">📝 Notas del Instructor</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px;">
+          "Recuerda mantener la tensión uniforme en los hilos/alambres para evitar imperfecciones en el tejido final."
+        </p>
+      </div>
+
+      <!-- Comentarios e Inquietudes -->
+      <div>
+        <h4>💬 Preguntas y Comentarios de la Clase</h4>
+        <div style="max-height: 120px; overflow-y: auto; background: var(--bg-color); padding: 10px; border-radius: 8px; margin: 10px 0;">
+          <p style="font-size: 0.8rem; margin-bottom: 6px;"><strong>Tú:</strong> ¿Qué calibre de alambre se recomienda para comenzar?</p>
+          <p style="font-size: 0.8rem; color: var(--primary);"><strong>Instructor:</strong> Hola, para nivel básico recomendamos calibre 20 o 22.</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <input type="text" class="form-control" placeholder="Escribe tu duda sobre la clase...">
+          <button class="btn btn-primary btn-sm">Enviar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function abrirModal(modulo, instructor) {
+      document.getElementById('modalTituloModulo').textContent = 'Módulo: ' + modulo;
+      document.getElementById('modalInstructor').textContent = instructor;
+      document.getElementById('modalClase').style.display = 'block';
+    }
+
+    function cerrarModal() {
+      document.getElementById('modalClase').style.display = 'none';
+    }
+
+    // Cerrar el modal al hacer clic fuera
+    window.onclick = function(event) {
+      const modal = document.getElementById('modalClase');
+      if (event.target === modal) {
+        cerrarModal();
+      }
+    }
+  </script>
+</body>
+</html>
